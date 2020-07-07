@@ -1,0 +1,12 @@
+.tc-bg-color{
+    background-color: #15202B;
+}
+.text-color{
+    color: white;
+}
+.twitter-icon{
+height: 3rem;
+}
+.left-panel-nav{
+    flex-direction: column;
+}
