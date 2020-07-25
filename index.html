@@ -1,68 +1,87 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Twitter Clone</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Twitter Clone</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body class="tc-bg-color">
-    <script src="app.js"></script>
-    <div class="row">
-        <div id="navbar">
-            <div>
-                <img class="twitter-icon" src="images/twitter-logo-white-png.png" />
+    <body class="tc-bg-color">
+        <script src="app.js"></script>
+        <div class="row">
+            <div id="navbar">
+                <div class="navbar-item">
+                    <div>
+                        <img class="twitter-icon" src="images/twitter-logo-white-png.png" />
+                    </div>
+                    <div class="active">
+                        <img src="images/home.png">
+                        <span>Home</span>
+                    </div>
+                    <div>
+                        <img src="images/explore.png">
+                        <span>Explore</span>
+                    </div>
+                    <div>
+                        <img src="images/notification.png">
+                        <span>Notifications</span>
+                    </div>
+                    <div>
+                        <img src="images/message.png">
+                        <span>Messages</span>
+                    </div>
+                    <div>
+                        <img src="images/bookmark.png">
+                        <span>Bookmarks</span>
+                    </div>
+                    <div>
+                        <img src="images/list.png">
+                        <span>Lists</span>
+                    </div>
+                    <div>
+                        <img src="images/profile.png">
+                        <span>Profile</span>
+                    </div>
+                    <div>
+                        <img src="images/more.jpg">
+                        <span>More</span>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img src="images/home.png">
-                <span>Home</span>
+            <div id="feed-container">
+                <div class="home-bar">
+                    <div class="home-page">Home
+                    </div>
+                </div>
+                <div class="input-field">
+                    <div class="profile-icon">
+                        <img src="images/profile.png" />
+                    </div>
+                    <div>
+                        <input placeholder="Whats happening?" maxlength="280"> </input>
+                    </div>
+                    <div role="button" class="tweet-button">
+                        <p>Tweet</p>
+                    </div>
+                </div>
+                <div class="feed-division"></div>
+                <div class="tweet-display">
+                    <span>Tweet content to be displayed here on pressing Tweet button.</span>
+                </div>
             </div>
-            <div>
-                <img src="images/explore.png">
-                <span>Explore</span>
-            </div>
-            <div>
-                <img src="images/notification.png">
-                <span>Notifications</span>
-            </div>
-            <div>
-                <img src="images/message.png">
-                <span>Messages</span>
-            </div>
-            <div>
-                <img src="images/bookmark.png">
-                <span>Bookmarks</span>
-            </div>
-            <div>
-                <img src="images/list.png">
-                <span>Lists</span>
-            </div>
-            <div>
-                <img src="images/profile.png">
-                <span>Profile</span>
-            </div>
-            <div>
-                <img src="images/more.jpg">
-                <span>More</span>
-            </div>
-            <div>
-                <span>Tweet</span>
+            <div class="search-container">
+                <div class="search-bar">
+                    <div class="search-icon">
+                        <img src="images/search.png">
+                    </div>
+                    <div>
+                        <input placeholder="Search Twitter">
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="feed-container">
-            <table>
-                <tr>
-                    <th>Home</th>
-                </tr>
-                <tr>
-                    <td>What's happening?</td>
-                </tr>
-            </table>
-        </div>
-        <div id="side-container">Others</div>
-    </div>
-</body>
+    </body>
 
 </html>
