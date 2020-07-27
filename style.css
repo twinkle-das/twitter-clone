@@ -1,4 +1,4 @@
-.tc-bg-color, .input-field input {
+.tc-bg-color, .tweet-container input {
     background-color: #15202B;
     color: white;
 }
@@ -6,6 +6,7 @@
 .row {
     display: flex;
     justify-content: center;
+    height: 100vh;
 }
 
 #navbar, #feed-container, #side-container {
@@ -22,7 +23,7 @@
 }
 
 .twitter-icon {
-    height: 3rem !important;
+    height: 45px !important;
     width: 45px !important;
     cursor: pointer;
 }
@@ -36,7 +37,7 @@
     display: flex;
     align-items: center;
     max-width: max-content;
-    margin: 0 10px;
+    padding: 0 20px;
 }
 
 .navbar-item div:hover:not(:first-child) {
@@ -53,8 +54,7 @@
 }
 
 #feed-container img {
-    height: 4rem;
-    width: 65px;
+    height: 65px;
 }
 
 .home-bar {
@@ -64,6 +64,8 @@
     z-index: 1;
     background-color: #15202B;
     top: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .active {
@@ -71,12 +73,11 @@
 }
 
 #navbar img {
-    height: 2rem;
     width: 30px;
 }
 
 #navbar span {
-    margin-inline-start: 15px
+    margin-left: 15px;
 }
 
 #feed-container .my-tweet {
@@ -88,35 +89,66 @@ input {
     position: relative;
     border: 0;
     padding: 0;
+    outline: none;
 }
 
-.input-field {
+.tweet-container {
     display: flex;
     margin-top: 70px;
 }
 
+.tweet-input, .search-input {
+    width: 100%;
+}
+
+.tweet-input input {
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.tweet-input input::placeholder {
+    font-size: 20px;
+}
+
+.tweet-input input:focus::placeholder {
+    color: #BDC1C9;
+}
+
+.search-input input::placeholder {
+    font-size: 14px;
+}
+
 .profile-icon, .home-page {
     cursor: pointer;
+    padding: 0 10px;
 }
 
 .tweet-button {
     background-color: #19608E;
     border-radius: 50px;
-    align-self: flex-end;
-    width: 80px;
+    width: 70px;
     height: 37px;
     cursor: default;
     color: #8A8F95;
-    margin-inline-start: 270px;
     font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
+    float: right;
+    margin-top: -37px;
+    margin-right: 15px;
+}
+
+.search-container {
+    width: 300px;
+    padding: 0 15px;
 }
 
 .search-icon {
     width: 20px;
-    margin-top: 10px;
+    display: flex;
     margin-left: 15px;
 }
 
@@ -125,19 +157,17 @@ input {
     height: auto;
 }
 
-.search-bar {
+.search-bar, .search-bar input {
     display: flex;
-    flex-direction: row;
     background-color: #263442;
+    color: white;
     border-radius: 50px;
-    height: 40px;
-    width: 320px;
-}
-
-.search-bar input {
-    background: #263442;
-    border-radius: 50px;
-    color: white
+    height: 25px;
+    padding: 10px;
+    align-items: center;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 16px;
 }
 
 .feed-division {
@@ -151,4 +181,6 @@ input {
     font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif;
     font-weight: 400;
     border-bottom: 1px solid #38444D;
+    padding: 0 10px;
+    cursor: pointer;
 }
