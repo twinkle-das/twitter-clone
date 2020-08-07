@@ -6,6 +6,7 @@
         <title>Twitter Clone</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
+        <script src="app.js"></script>
     </head>
 
     <body class="tc-bg-color">
@@ -60,15 +61,15 @@
                         <img src="images/profile.png" />
                     </div>
                     <div class="tweet-input">
-                        <input placeholder="What's happening?" maxlength="280"> </input>
+                        <input id="myTweet" placeholder="What's happening?" maxlength="280"> </input>
                     </div>
                 </div>
-                <div role="button" class="tweet-button">
+                <div role="button" class="tweet-button" onclick="getMyTweet();">
                     Tweet
                 </div>
                 <div class="feed-division"></div>
-                <div class="tweet-display">
-                    <span>Tweet content to be displayed here on pressing Tweet button.</span>
+                <div id="tweet-display">
+                    <span></span>
                 </div>
             </div>
             <div class="search-container">

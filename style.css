@@ -28,7 +28,7 @@
     cursor: pointer;
 }
 
-.twitter-icon:hover {
+.twitter-icon:hover, #tweet-display img:hover {
     background-color: #162D40;
     border-radius: 50%;
 }
@@ -104,6 +104,7 @@ input {
 .tweet-input {
     margin-bottom: 40px;
 }
+
 .tweet-input input {
     padding: 5px;
     box-sizing: border-box;
@@ -129,12 +130,14 @@ input {
 }
 
 .tweet-button {
-    background-color: #19608E;
+    /* background-color: #19608E; */
+    background-color: #1DA1F2;
     border-radius: 50px;
     width: 70px;
     height: 37px;
-    cursor: default;
-    color: #8A8F95;
+    cursor: pointer;
+    /* color: #8A8F95; */
+    color: white;
     font-size: 16px;
     display: flex;
     justify-content: center;
@@ -142,6 +145,10 @@ input {
     float: right;
     margin-top: -37px;
     margin-right: 15px;
+}
+
+.tweet-button:hover {
+    background-color: #1A91DA;
 }
 
 .search-container {
@@ -179,7 +186,7 @@ input {
     margin-top: 10px;
 }
 
-.tweet-display {
+#tweet-display {
     font-size: 16px;
     font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif;
     font-weight: 400;
