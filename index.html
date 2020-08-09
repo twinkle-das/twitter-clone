@@ -10,7 +10,6 @@
     </head>
 
     <body class="tc-bg-color">
-        <script src="app.js"></script>
         <div class="row">
             <div id="navbar">
                 <div class="navbar-item">
@@ -56,20 +55,21 @@
                     <div class="home-page">Home
                     </div>
                 </div>
-                <div class="tweet-container">
-                    <div class="profile-icon">
-                        <img src="images/profile.png" />
+                <form id="myForm">
+                    <div class="tweet-container">
+                        <div class="profile-icon">
+                            <img src="images/profile.png" />
+                        </div>
+                        <div class="twiiter-feed">
+                            <input id="tweet-input" placeholder="What's happening?" maxlength="280" required> </input>
+                        </div>
                     </div>
-                    <div class="tweet-input">
-                        <input id="myTweet" placeholder="What's happening?" maxlength="280"> </input>
-                    </div>
-                </div>
-                <div role="button" class="tweet-button" onclick="getMyTweet();">
-                    Tweet
-                </div>
+                    <button id="tweet-btn" type="button">
+                        Tweet
+                    </button>
+                </form>
                 <div class="feed-division"></div>
                 <div id="tweet-display">
-                    <span></span>
                 </div>
             </div>
             <div class="search-container">
@@ -83,6 +83,7 @@
                 </div>
             </div>
         </div>
+        <script src="app.js"></script>
     </body>
 
 </html>
