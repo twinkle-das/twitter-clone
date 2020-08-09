@@ -129,9 +129,9 @@ input {
     border-radius: 50px;
     width: 70px;
     height: 37px;
-    cursor: ;
     color: #8A8F95;
     font-size: 16px;
+    font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,6 +146,10 @@ input {
     background-color: #1DA1F2;
     color: white;
     cursor: pointer;
+}
+
+#myForm:valid #tweet-btn:hover {
+    background-color: #1A91DA;
 }
 
 .search-container {
