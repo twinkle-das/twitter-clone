@@ -1,36 +1,25 @@
-// ( function () {
-//     const tweet = document.getElementById( 'tweet-input' );
-//     tweet.addEventListener( 'change', () => {
-//         document.getElementById( 'tweet-btn' ).disabled = !(tweet-input).checkValidity();
-//     } );
-    
-// } )();
+(function() {
+    const tweetBtn=document.getElementById('tweet-btn');
+    const timeLine=document.getElementById('tweet-display');
+    const inputTweet=document.getElementById('tweet-input')
+    tweetBtn.addEventListener('click', function() {
+        const node=document.createElement('DIV');
+        const textnode=document.createTextNode(inputTweet.value);
+        node.appendChild(textnode);
+        timeLine.insertBefore(node, timeLine.firstChild);
+        document.getElementById('tweet-input').value='';
+        tweetBtn.classList.removeAttribute('active');
+        tweetBtn.disabled=true;
+    });
 
-// function enableBtn() {
-//     if ( document.getElementById( 'tweet-input' ).value !== '' ) {
-//         document.getElementById( 'tweet-btn' ).disabled = false;
-//     } else {
-//         document.getElementById( 'tweet-btn' ).disabled = true;
-//     }
+    inputTweet.addEventListener('keyup', function(event) {
+        if(event.target.value>0) {
+            tweetBtn.classList.add('active');
+            tweetBtn.disabled=false;
+        } else {
+            tweetBtn.classList.remove('active');
+            tweetBtn.disabled=true;
+        }
+    });
 
-//let btnCursor = document.getElementById( "tweet-btn" ).style.cursor;
-
-// if ( tweet-input.value != '' ) {
-//     document.getElementById( 'tweet-btn' ).style.cursor = none;
-// } else {
-//     document.getElementById( 'tweet-btn' ).style.cursor = none;
-// }
-
-( function () {
-    document.getElementById( 'tweet-btn' )
-        .addEventListener( 'click', function (myTweet) {
-            myTweet = document.getElementById( 'tweet-input' ).value;
-            let node = document.createElement( 'DIV' );
-            let textnode = document.createTextNode( myTweet );
-            node.appendChild( textnode );
-            // document.getElementById( "tweet-display" ).appendChild( node );
-            element = document.getElementById( 'tweet-display' );
-            element.insertBefore( node, element.firstChild );
-            document.getElementById( 'tweet-input' ).value = '';
-        } );
-} )();
+})();
