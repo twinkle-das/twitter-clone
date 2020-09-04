@@ -54,17 +54,17 @@
                     <div class="home-page">Home
                     </div>
                 </div>
-                    <div class="tweet-container">
-                        <div class="profile-icon">
-                            <img src="images/profile.png" />
-                        </div>
-                        <div class="twiiter-feed">
-                            <input id="tweet-input" placeholder="What's happening?"> </input>
-                        </div>
+                <div class="tweet-container">
+                    <div class="profile-icon">
+                        <img src="images/profile.png" />
                     </div>
-                    <button id="tweet-btn" type="button" disabled>
-                        Tweet
-                    </button>
+                    <div class="twitter-feed">
+                        <input id="tweet-input" placeholder="What's happening?"> </input>
+                    </div>
+                </div>
+                <button id="tweet-btn" type="button" disabled>
+                    Tweet
+                </button>
                 <div class="feed-division"></div>
                 <div id="tweet-display">
                 </div>
@@ -74,10 +74,12 @@
                     <div class="search-icon">
                         <img src="images/search.png">
                     </div>
-                    <div class="search-input">
-                        <input placeholder="Search Twitter">
+                    <div id="input-search">
+                        <input class="search-input" autocomplete="off" type="text" name="search"
+                            placeholder="Search Twitter">
                     </div>
                 </div>
+                <div id="search-result"></div>
             </div>
         </div>
         <script src="app.js"></script>
