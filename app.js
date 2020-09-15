@@ -51,7 +51,7 @@ const twitterUsers=[
     inputSearch.addEventListener('keyup', function(event) {
         let searchQuery = event.target.value;
         let filteredResults = twitterUsers.filter((twitterUser) => {
-            return twitterUser.indexOf(searchQuery) > -1;
+            return twitterUser.toLowerCase().indexOf(searchQuery.toLowerCase()) > -1;
         });
         searchResult.innerHTML = '';
         filteredResults.forEach((result) => {
@@ -59,7 +59,7 @@ const twitterUsers=[
             searchNode.innerHTML = result;
             searchResult.appendChild(searchNode);
         });
-        if(searchQuery !== '') {
+        if(searchQuery.toLowerCase() !== '') {
             searchResult.classList.add('visible');
         } else {
             searchResult.classList.remove('visible');

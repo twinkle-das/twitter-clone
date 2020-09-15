@@ -1,9 +1,0 @@
-  11 git status
-  12 git add .
-
-  [ 14 git config --global user.email "twinkledas086@gmail.com"
-  15 git config --list
-  17 git remote -v ]
-
-  20 git commit -m"init commit"
-  21 git push origin master
