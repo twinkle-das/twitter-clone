@@ -155,7 +155,6 @@ input {
 }
 
 #tweet-display div {
-    position: absolute;
     color: white;
     width: 580px;
     font-size: 16px;
