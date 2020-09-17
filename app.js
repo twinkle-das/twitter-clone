@@ -1,4 +1,4 @@
-const twitterUsers=[
+const twitterUsers = [
     'Lusan Das',
     'Marzia Kjellberg',
     'PewDiePie',
@@ -22,21 +22,42 @@ const twitterUsers=[
 ];
 
 (function() {
+    let timeLine = document.querySelector('#tweet-display');
+    let tweetArr = JSON.parse(localStorage.getItem('tweet')) || [];
     const tweetBtn = document.querySelector('#tweet-btn');
-    const timeLine = document.querySelector('#tweet-display');
     const inputTweet = document.querySelector('#tweet-input');
     const inputSearch = document.querySelector('#input-search');
     const searchResult = document.querySelector('#search-result');
 
+    function renderTweets() {
+        timeLine.innerHTML = ''
+        if(localStorage.getItem('tweet') != '') {
+            tweetArr.forEach((tweet) => {
+                const node = document.createElement('DIV');
+                node.innerText = tweet.value;
+                timeLine.insertBefore(node, timeLine.firstChild);})
+        } else {
+            const node = document.createElement('DIV');
+            node.innerText = inputTweet.value;
+            timeLine.insertBefore(node, timeLine.firstChild);
+        }
+    }
+
+    renderTweets();
+
     tweetBtn.addEventListener('click', function() {
-        const node = document.createElement('DIV');
-        const textnode = document.createTextNode(inputTweet.value);
-        node.appendChild(textnode);
-        timeLine.insertBefore(node, timeLine.firstChild);
-        document.getElementById('tweet-input').value = '';
+        tweetArr.push({
+            id: tweetArr.length + 1,
+            value: inputTweet.value
+        })
+        localStorage.setItem('tweet', JSON.stringify(tweetArr));
+        console.log(tweetArr)
+        renderTweets();
+        inputTweet.value = '';
         tweetBtn.classList.remove('active');
         tweetBtn.disabled = true;
     });
+
 
     inputTweet.addEventListener('keyup', function(e) {
         if(e.target.value !== '') {
@@ -65,5 +86,4 @@ const twitterUsers=[
             searchResult.classList.remove('visible');
         }
     })
-
 })();

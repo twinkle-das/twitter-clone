@@ -156,6 +156,7 @@ input {
 
 #tweet-display div {
     color: white;
+    width: 580px;
     font-size: 16px;
     font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif;
     font-weight: 400;
@@ -166,6 +167,26 @@ input {
 
 #tweet-display div:hover {
     background-color: #192734;
+}
+
+.twitter-timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.twitter-timeline img {
+    height: 20px !important;
+}
+
+.deleteBtn {
+    display: none;
+    position: relative;
+    top: 5px;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 1;
+    line-height: 1.5;
 }
 
 .search-container {
